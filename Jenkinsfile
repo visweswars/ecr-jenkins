@@ -11,7 +11,7 @@ pipeline {
      stage ('Publish to DockerHub') {
       steps {
         withDockerRegistry([credentialsId: "dockerhub", url: ""]) {
-          sh 'docker push viswareddy/jenkinsdemo:""$GIT_COMMIT"https://github.com/visweswars/ecr-jenkins.git"'
+          sh 'docker push viswareddy/jenkinsdemo:""$GIT_COMMIT""'
          }
        }
      }
